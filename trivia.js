@@ -1,26 +1,35 @@
 const readline = require("readline")
 const questions = require('./questions.json');
-
 const rl =
  readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
+var score = 0;
 
-// for loop to run it 5 time times
-console.log("Trivia game!");
-let score = 0;
-trivia();
+const game = async () => {
+    score = 0;
+    let ans = "";
+    console.log("Trivia game!");
+    for(let i = 0; i < 5; i++){
+        await trivia(i + 1);
+    }
+    console.log("Your score is: " + score + " out of 5");
+    ans = await getInput("Would you like to play again? (y/n)");
+    if(ans.toUpperCase() == "Y"){
+        game();
+    }else{
+        console.log("bye!");
+    }
+}
 
-// Todo: only make this appear when the game is over
-console.log("Your score is: " + score);
-
-async function trivia(){
+async function trivia(turn){
     let num = 0;
     let question = questions[num];
     let answer = question.options.indexOf(question.answer) + 1;
     let ans = "";
 
+    console.log("question " + turn + ": ");
     console.log(question.question);
 
     for(let i = 0; i < question.options.length; i++){
@@ -39,7 +48,9 @@ async function trivia(){
 
 function getInput(question){
     return new Promise(resolve => rl.question(question, ans => {
-        rl.close();
+        // rl.close();
         resolve(ans);
     }))
 }
+
+game();

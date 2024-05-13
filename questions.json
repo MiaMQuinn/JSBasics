@@ -1,8 +1,8 @@
 [
     {
         "question":"How many cats does Mia have?",
-        "options":["2", "3", "4"],
-        "answer":"2"
+        "options":["Two", "Three", "Four"],
+        "answer":"Two"
     },
     {
         "question":"What is the word for the fear of long words?",
@@ -21,7 +21,7 @@
     },
     {
         "question":"eee",
-        "options":["aaa", "bbb", "ccc"],
+        "options":["aaa", "bbb", "eee"],
         "answer":"eee"
     }
 ]
