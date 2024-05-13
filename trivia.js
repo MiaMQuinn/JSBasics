@@ -11,6 +11,7 @@ const game = async () => {
     score = 0;
     let ans = "";
     console.log("Trivia game!");
+
     for(let i = 0; i < 5; i++){
         await trivia(i + 1);
     }
@@ -19,12 +20,13 @@ const game = async () => {
     if(ans.toUpperCase() == "Y"){
         game();
     }else{
+        rl.close();
         console.log("bye!");
     }
 }
 
 async function trivia(turn){
-    let num = 0;
+    let num = getRandomInt(questions.length);
     let question = questions[num];
     let answer = question.options.indexOf(question.answer) + 1;
     let ans = "";
@@ -48,9 +50,12 @@ async function trivia(turn){
 
 function getInput(question){
     return new Promise(resolve => rl.question(question, ans => {
-        // rl.close();
         resolve(ans);
     }))
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }
 
 game();
