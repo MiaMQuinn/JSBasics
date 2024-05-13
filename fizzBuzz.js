@@ -1,9 +1,9 @@
-fizzbuzz();
+fizzbuzz(100);
 
-function fizzbuzz(){
+function fizzbuzz(int){
     let word = [];
     let bIndex = 0;
-    for(let i = 1; i < 100; i++){
+    for(let i = 1; i < int; i++){
         bIndex = 0;
         word = [];
         if(i % 11 == 0){

@@ -1,0 +1,27 @@
+[
+    {
+        "question":"How many cats does Mia have?",
+        "options":["2", "3", "4"],
+        "answer":"2"
+    },
+    {
+        "question":"What is the word for the fear of long words?",
+        "options":["liophobia", "Hippopotomonstrosesquippedaliophobia", "wordphobia"],
+        "answer":"Hippopotomonstrosesquippedaliophobia"
+    },
+    {
+        "question":"What year was the very first model of the iPhone released?",
+        "options":["2005", "2007", "2008"],
+        "answer":"2007"
+    },
+    {
+        "question":"What is the airspeed velocity of an Unladen swallow?",
+        "options":["11-16 meters per second", "8-14 meters per second", "15-19 meters per second"],
+        "answer":"11-16 meters per second"
+    },
+    {
+        "question":"eee",
+        "options":["aaa", "bbb", "ccc"],
+        "answer":"eee"
+    }
+]
